@@ -9,14 +9,19 @@
     }
  
     .img{
-        width: 10%;
+        width: 20%;
       }
-
+     
   }
    
 
+html{
+    background-color: #333f47;
+}
+
 .img{
-    width: 20%;
+    width: 15%;
+  
 }
 .menu{
     cursor: pointer;
@@ -24,12 +29,13 @@
 
 h1,h2 {
     font-family: 'Fira Sans', sans-serif;
+    color: aliceblue;
 
 }
 #kmatual,#kmdia,#oleo{
     font-family: 'Fira Sans', sans-serif;
     font-size: 1.5rem;
-
+    width: 80%;
 }
 
 .center{
@@ -43,18 +49,29 @@ button{
     width: 50%;
     height: auto;
     padding: 10px 0px;
-    background-color:rgb(138, 123, 123);
+    background-color:aliceblue;
     border: 1px solid antiquewhite;
     border-radius: 5px;
-    color: white;
+    color: black;
     font-family: 'Fira Sans', sans-serif;
     font-size: large;
     cursor: pointer;
     box-shadow: -3px 4px 0 #888,-7px 7px 0 #333;
 }
+button:active::after{
+    background-color: #fe6543;
+    color: beige;
+}
+
 label{
     font-family: 'Fira Sans', sans-serif;
     font-size: 1.5rem;
-   
+    color: aliceblue;
     
+}
+table{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1.5rem;
+    color: aliceblue;
+    border: #fe6543;
 }
