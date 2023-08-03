@@ -47,7 +47,7 @@ function Deletar(){
    
   
     db.transaction(function(tx) {
-        tx.executeSql("DELETE FROM troca WHERE resultado ");
+        tx.executeSql("DELETE FROM troca WHERE pxtroca ");
       
     });
    
