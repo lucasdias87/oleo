@@ -7,7 +7,7 @@ var db = openDatabase("myTb", "2.0", "troca",4048);
 
 db.transaction(function(criar) {
     //tx.executeSql("DROP TABLE myTable" );
-    criar.executeSql("CREATE TABLE IF NOT EXISTS troca ( id  PRIMARY KEY,pxtroca TEXT,resultado TEXT, data TEXT)" );
+    criar.executeSql("CREATE TABLE  troca ( id  PRIMARY KEY,pxtroca TEXT,resultado TEXT, data TEXT)" );
 //       tx.executeSql('INSERT INTO myTable (pxtroca, km, dia,mes, ano)VALUE(?,?,?,?,?)',{resultado,pxkm,dia,month,year});
 
 });
@@ -47,7 +47,7 @@ function Deletar(){
    
   
     db.transaction(function(tx) {
-        tx.executeSql("DELETE FROM troca WHERE id ");
+        tx.executeSql("DELETE FROM troca WHERE resultado ");
       
     });
    
