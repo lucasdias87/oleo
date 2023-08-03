@@ -61,14 +61,14 @@ function Deletar(){
 
 
 function Calcular(){
+  
+    
     const diario = document.getElementById('kmdia').value;
     const mil = document.getElementById('mil').value;
     const doismil = document.getElementById('doismil').value;
     const kmatual = document.getElementById('kmatual').value;
-    const tipool = document.getElementById('oleo').value;
-
-    
    
+
     
    
    
@@ -84,7 +84,8 @@ function Calcular(){
       const resultado= mil/diario;
       const pxkm = parseInt(mil)+parseInt(kmatual); 
       data.setDate(data.getDate() +parseInt( resultado));
-      
+      const tipool = document.getElementById('oleo').value;
+
       const  year = data.getFullYear();
       const  month = data.getMonth() + 1;
       const   dia = data.getDate();
@@ -114,12 +115,14 @@ function Calcular(){
         const  resultado= doismil/diario ;
         const pxkm = parseInt(mil)+parseInt(kmatual); 
         data.setDate(data.getDate() +parseInt( resultado));
-        
+        const tipool = document.getElementById('oleo').value;
+
+    
         year = data.getFullYear();
         month = data.getMonth() + 1;
          dia = data.getDate();
 
-         const tipool=document.getElementById('OLEO');
+         
          const array_dt=[dia,month,year];
          document.getElementById('resultado').innerHTML = " Sua proxima troca sera em "+resultado.toFixed()+" dias aproximadamente"
     
