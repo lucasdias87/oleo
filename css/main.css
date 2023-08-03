@@ -5,18 +5,18 @@
 
     @media screen and (max-width: 750px){
     #kmatual,#kmdia,#oleo{
-      
         width: 100%;
-    
     }
  
-
+    .img{
+        width: 10%;
+      }
 
   }
    
 
 .img{
-    width: 8%;
+    width: 20%;
 }
 .menu{
     cursor: pointer;
