@@ -97,7 +97,7 @@ function Calcular(){
     document.getElementById('resultado').innerHTML = " Sua proxima troca sera em "+resultado.toFixed()+" dias aproximadamente"
     
     document.getElementById('date').innerHTML= "Dia" +" " +dia + "/"+  month+ "/" +  year;
-    document.getElementById('toleo').innerHTML= "tipo de oleo" + tipool;
+    document.getElementById('toleo').innerHTML= "tipo de oleo" +  tipool;
   
     db.transaction(function(armazenar){
             
@@ -127,7 +127,7 @@ function Calcular(){
          document.getElementById('resultado').innerHTML = " Sua proxima troca sera em "+resultado.toFixed()+" dias aproximadamente"
     
         document.getElementById('date').innerHTML= "Dia" +" " +dia + "/"+  month+ "/" +  year;
-        document.getElementById('toleo').innerHTML= "tipo de oleo" + tipool;
+        document.getElementById('toleo').innerHTML= "tipo de oleo" +  tipool;
        
         db.transaction(function(armazenar){
             armazenar.executeSql("INSERT INTO  troca  (pxtroca,resultado,data)VALUES(?,?,?)",[pxkm,tipool,array_dt]);
