@@ -25,6 +25,7 @@ html{
 }
 .menu{
     cursor: pointer;
+    padding: 3%;
 }
 
 h1,h2 {
@@ -58,7 +59,7 @@ button{
     cursor: pointer;
     box-shadow: -3px 4px 0 #888,-7px 7px 0 #333;
 }
-button:active::after{
+button:active:after{
     background-color: #fe6543;
     color: beige;
 }
