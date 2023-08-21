@@ -24,12 +24,16 @@ db.transaction(function(tx) {
         var tr = '';
         for(var i = 0; i < rows.length; i++){
         tr += '<tr>';
-        tr += '<td>' + rows[i].pxtroca + ' O KM da proxima troca';
-        tr += '<td>' + rows[i].data + ' Data da proxima troca ';
-        tr += '<td>' + rows[i].resultado  + ' Tipo de oleo';
+       
+        tr += '<th>' + rows[i].pxtroca + ' O KM da proxima troca'+" ";
+       
+        tr += '<th>' + rows[i].data +" "+ ' Data da proxima troca '+" ";
+        
+        tr += '<th>' + rows[i].resultado  + ' Tipo de oleo';
        
         
-        tr += '</tr>';             
+        tr += '</tr>';              
+        
         
         
         }
@@ -47,7 +51,7 @@ function Deletar(){
    
   
     db.transaction(function(tx) {
-        tx.executeSql("DELETE FROM troca WHERE pxtroca ");
+        tx.executeSql("DELETE FROM troca WHERE data ");
       
     });
    
@@ -97,8 +101,9 @@ function Calcular(){
     document.getElementById('resultado').innerHTML = " Sua proxima troca sera em "+resultado.toFixed()+" dias aproximadamente"
     
     document.getElementById('date').innerHTML= "Dia" +" " +dia + "/"+  month+ "/" +  year;
-    document.getElementById('toleo').innerHTML= "tipo de oleo" +  tipool;
-  
+    document.getElementById('toleo').innerHTML= "tipo de oleo" +" "+  tipool;
+    document.getElementById('km').innerHTML= "KM" +" "+  pxkm;
+
     db.transaction(function(armazenar){
             
         armazenar.executeSql("INSERT INTO  troca  (pxtroca,resultado,data) VALUES (?,?,?)",[pxkm,tipool,array_dt ]);
@@ -127,12 +132,13 @@ function Calcular(){
          document.getElementById('resultado').innerHTML = " Sua proxima troca sera em "+resultado.toFixed()+" dias aproximadamente"
     
         document.getElementById('date').innerHTML= "Dia" +" " +dia + "/"+  month+ "/" +  year;
-        document.getElementById('toleo').innerHTML= "tipo de oleo" +  tipool;
+        document.getElementById('toleo').innerHTML= "tipo de oleo" +" "+  tipool;
+        document.getElementById('km').innerHTML= "KM" +" "+  pxkm;
        
         db.transaction(function(armazenar){
             armazenar.executeSql("INSERT INTO  troca  (pxtroca,resultado,data)VALUES(?,?,?)",[pxkm,tipool,array_dt]);
-    });
+        });
+ 
+    }
 
     }
-    
-}
