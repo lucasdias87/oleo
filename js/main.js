@@ -2,46 +2,22 @@
 
   
 
-var db = openDatabase("myTb", "2.0", "troca",4048);
 
 
-db.transaction(function(criar) {
-    //tx.executeSql("DROP TABLE myTable" );
-    criar.executeSql("CREATE TABLE  troca ( id  PRIMARY KEY,pxtroca TEXT,resultado TEXT, data TEXT)" );
-//       tx.executeSql('INSERT INTO myTable (pxtroca, km, dia,mes, ano)VALUE(?,?,?,?,?)',{resultado,pxkm,dia,month,year});
-
-});
+var  m1=   localStorage.getItem("km");
+var  m2=   localStorage.getItem("tipooleo");
+var  m3=   localStorage.getItem("data");
 
 
 
+
+document.getElementById('mostrar1').innerHTML=  m1;
+document.getElementById('mostrar2').innerHTML=   m2;
+document.getElementById('mostrar3').innerHTML=   m3;
    
-var mostrar = document.getElementById('mostrar');
 
-db.transaction(function(tx) {
-    tx.executeSql('SELECT * FROM troca ', [], function (tx, mostra) {
-       
-        var rows = mostra.rows;
-        var tr = '';
-        for(var i = 0; i < rows.length; i++){
-        tr += '<tr>';
-       
-        tr += '<th>' + rows[i].pxtroca + ' O KM da proxima troca'+" ";
-       
-        tr += '<th>' + rows[i].data +" "+ ' Data da proxima troca '+" ";
-        
-        tr += '<th>' + rows[i].resultado  + ' Tipo de oleo';
-       
-        
-        tr += '</tr>';              
-        
-        
-        
-        }
-        mostrar.innerHTML = tr; 
-},null 
-);
-});
-   
+
+
 
 
 
@@ -50,10 +26,11 @@ function Deletar(){
     
    
   
-    db.transaction(function(tx) {
-        tx.executeSql("DELETE FROM troca WHERE data ");
-      
-    });
+    localStorage.removeItem("km");
+    localStorage.removeItem("tipooleo");
+    localStorage.removeItem("data");
+
+
    
 }
 
@@ -98,16 +75,16 @@ function Calcular(){
     
        const array_dt=[dia,month,year];
        
-    document.getElementById('resultado').innerHTML = " Sua proxima troca sera em "+resultado.toFixed()+" dias aproximadamente"
+    document.getElementById('resultado').innerHTML = " Sua proxima troca sera em "+resultado.toFixed()+" dias aproximadamente";
     
     document.getElementById('date').innerHTML= "Dia" +" " +dia + "/"+  month+ "/" +  year;
     document.getElementById('toleo').innerHTML= "tipo de oleo" +" "+  tipool;
     document.getElementById('km').innerHTML= "KM" +" "+  pxkm;
 
-    db.transaction(function(armazenar){
-            
-        armazenar.executeSql("INSERT INTO  troca  (pxtroca,resultado,data) VALUES (?,?,?)",[pxkm,tipool,array_dt ]);
-});
+   
+    localStorage.setItem("km",pxkm );
+    localStorage.setItem("tipooleo",tipool)
+    localStorage.setItem("data",array_dt)
    
    
     
@@ -135,10 +112,14 @@ function Calcular(){
         document.getElementById('toleo').innerHTML= "tipo de oleo" +" "+  tipool;
         document.getElementById('km').innerHTML= "KM" +" "+  pxkm;
        
-        db.transaction(function(armazenar){
-            armazenar.executeSql("INSERT INTO  troca  (pxtroca,resultado,data)VALUES(?,?,?)",[pxkm,tipool,array_dt]);
-        });
- 
+
+       
+        localStorage.setItem("km",pxkm );
+        localStorage.setItem("tipooleo",tipool)
+        localStorage.setItem("data",array_dt)
+
+
+
     }
 
     }
