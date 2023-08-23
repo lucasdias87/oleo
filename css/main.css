@@ -43,11 +43,12 @@ body{
     
 
 }
-table tr{
+table, tr{
     
     border-color: aliceblue;
     width: 100%;
    
+    margin: auto;
 
 }
 
@@ -73,6 +74,8 @@ input:active{
 h1,h2,th {
     font-family: 'Fira Sans', sans-serif;
     color: aliceblue;
+    font-size: x-large;
+    margin: 1%;
 
 }
 #kmatual,#kmdia,#oleo{
