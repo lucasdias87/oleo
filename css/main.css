@@ -71,7 +71,7 @@ input:active{
 }
 
 
-h1,h2,th {
+h1,h2,th,details {
     font-family: 'Fira Sans', sans-serif;
     color: aliceblue;
     font-size: x-large;
