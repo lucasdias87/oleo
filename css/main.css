@@ -29,7 +29,7 @@ body{
 }
 
 .img{
-    width: 18%;
+    width: 20%;
     
 }
 
@@ -39,10 +39,22 @@ body{
 }
 .menu{
     cursor: pointer;
-    padding: 7%;
+    padding: 6%;
     
 
 }
+.dica{
+  animation: float 5s infinite ease-in-out 0s;
+  cursor: pointer;
+  width: 50%;
+}
+
+@keyframes float {
+  50% {
+     transform: translate(0, 20px);
+  }
+}
+ 
 table, tr{
     
     border-color: aliceblue;
