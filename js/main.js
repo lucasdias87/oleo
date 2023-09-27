@@ -3,18 +3,23 @@
   
 
 
+let  m1=   JSON.parse(localStorage.getItem("km"));
 
-var  m1=   localStorage.getItem("km");
-var  m2=   localStorage.getItem("tipooleo");
-var  m3=   localStorage.getItem("data");
-
-
+let  m2=   JSON.parse(localStorage.getItem("tipooleo"));
+let  m3=   JSON.parse(localStorage.getItem("data"));
 
 
-document.getElementById('mostrar1').innerHTML=  m1;
-document.getElementById('mostrar2').innerHTML=   m2;
-document.getElementById('mostrar3').innerHTML=   m3;
+
+  
+    document.getElementById('mostrar1').innerHTML=  m1;
+    document.getElementById('mostrar2').innerHTML=   m2;
+    document.getElementById('mostrar3').innerHTML=   m3;
+
+  
+  
    
+       
+  
 
 
 
@@ -29,7 +34,7 @@ function Deletar(){
     localStorage.removeItem("km");
     localStorage.removeItem("tipooleo");
     localStorage.removeItem("data");
-
+    localStorage.removeItem("troca");
 
    
 }
@@ -48,9 +53,15 @@ function Calcular(){
     const mil = document.getElementById('mil').value;
     const doismil = document.getElementById('doismil').value;
     const kmatual = document.getElementById('kmatual').value;
+   const dialog = document.getElementById("dialog");
    
+    dialog.showModal();
 
-    
+    const fecharmodal=document.getElementById("fechar-modal"); 
+
+    fecharmodal.addEventListener('click',()=>{
+      dialog.close();
+    })
    
    
 
@@ -71,8 +82,7 @@ function Calcular(){
       const  month = data.getMonth() + 1;
       const   dia = data.getDate();
       
-       
-    
+     
        const array_dt=[dia,month,year];
        
     document.getElementById('resultado').innerHTML = " Sua proxima troca sera em "+resultado.toFixed()+" dias aproximadamente";
@@ -82,12 +92,17 @@ function Calcular(){
     document.getElementById('km').innerHTML= "KM" +" "+  pxkm;
 
    
-    localStorage.setItem("km",pxkm );
-    localStorage.setItem("tipooleo",tipool)
-    localStorage.setItem("data",array_dt)
+    
+    localStorage.setItem("tipooleo",JSON.stringify(tipool));
+    localStorage.setItem("data",JSON.stringify(array_dt));
+   
+    localStorage.setItem('km', JSON.stringify(pxkm)); 
    
    
     
+    
+
+
 
     }
    if (document.getElementById("doismil").checked)
@@ -113,10 +128,11 @@ function Calcular(){
         document.getElementById('km').innerHTML= "KM" +" "+  pxkm;
        
 
+       //salvando no local storage
+        localStorage.setItem("tipooleo",JSON.stringify(tipool));
+        localStorage.setItem("data",JSON.stringify(array_dt));
        
-        localStorage.setItem("km",pxkm );
-        localStorage.setItem("tipooleo",tipool)
-        localStorage.setItem("data",array_dt)
+        localStorage.setItem('km', JSON.stringify(pxkm));
 
 
 
