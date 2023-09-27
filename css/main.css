@@ -144,7 +144,7 @@ tr:hover,:after {background-color: #fe6543;}
 button{
     font-size:x-large;
     font-family: 'Fira Sans', sans-serif;
-    border-radius: 50%;
+    border-radius: 5%;
   
 }
 
