@@ -27,9 +27,16 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
+ 
+dialog{
+  background-color: #333f47;
+  border-radius: 5%;
+}
+
+
 
 .img{
-    width: 18%;
+    width: 20%;
     
 }
 
@@ -39,15 +46,33 @@ body{
 }
 .menu{
     cursor: pointer;
-    padding: 3%;
+    padding: 6%;
     
-
+    
 }
-table tr{
+
+
+
+
+
+.dica{
+  animation: float 5s infinite ease-in-out 0s;
+  cursor: pointer;
+  width: 50%;
+}
+
+@keyframes float {
+  50% {
+     transform: translate(0, 20px);
+  }
+}
+ 
+table, tr{
     
     border-color: aliceblue;
     width: 100%;
    
+    margin: auto;
 
 }
 
@@ -70,11 +95,15 @@ input:active{
 }
 
 
-h1,h2,th {
+h1,h2,th,details {
     font-family: 'Fira Sans', sans-serif;
     color: aliceblue;
     font-size: x-large;
+    margin: 1%;
 
+}
+summary{
+  all: unset;
 }
 #kmatual,#kmdia,#oleo{
     font-family: 'Fira Sans', sans-serif;
