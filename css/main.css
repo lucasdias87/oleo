@@ -27,6 +27,13 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
+ 
+dialog{
+  background-color: #333f47;
+  border-radius: 5%;
+}
+
+
 
 .img{
     width: 20%;
@@ -41,8 +48,13 @@ body{
     cursor: pointer;
     padding: 6%;
     
-
+    
 }
+
+
+
+
+
 .dica{
   animation: float 5s infinite ease-in-out 0s;
   cursor: pointer;
@@ -89,6 +101,9 @@ h1,h2,th,details {
     font-size: x-large;
     margin: 1%;
 
+}
+summary{
+  all: unset;
 }
 #kmatual,#kmdia,#oleo{
     font-family: 'Fira Sans', sans-serif;
