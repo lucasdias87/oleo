@@ -31,6 +31,7 @@ body{
 dialog{
   background-color: #333f47;
   border-radius: 5%;
+  border-color: aliceblue;
 }
  dialog::backdrop{
   background-color:rgba(0, 0, 0, 0.603);
@@ -151,7 +152,7 @@ button{
 
 .btn-7 {
     background: linear-gradient(rgba,rgba(251,75,2,1)0%, rgba(255,151,0,1) 100%);
-      line-height: 42px;
+      line-height: 85%;
       padding: 0;
       border: none;
     }
