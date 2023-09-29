@@ -6,5 +6,5 @@
 
 [![GitHub license](https://img.shields.io/github/license/lucasdias87/Tempo-e-Temperatura-com-openweather?style=for-the-badge)](https://github.com/lucasdias87/Tempo-e-Temperatura-com-openweather/blob/main/LICENSE)
 
-Play Store
-###.[https://play.google.com/store/apps/details?id=com.moto.myapplication] 
+
+[Play Store](https://play.google.com/store/apps/details?id=com.moto.myapplication)
