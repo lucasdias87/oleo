@@ -85,7 +85,8 @@ function Calcular(){
      
        const array_dt=[dia,month,year];
        
-    document.getElementById('resultado').innerHTML = " Sua proxima troca sera em "+resultado.toFixed()+" dias aproximadamente";
+    document.getElementById('resultado').innerHTML = " Sua proxima troca sera em "
+    +resultado.toFixed()+" dias aproximadamente";
     
     document.getElementById('date').innerHTML= "Dia" +" " +dia + "/"+  month+ "/" +  year;
     document.getElementById('toleo').innerHTML= "tipo de oleo" +" "+  tipool;
