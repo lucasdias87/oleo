@@ -37,24 +37,7 @@ dialog{
   background-color:rgba(0, 0, 0, 0.603);
  }
 
- .btn-dialog{
-    width: 35%;
-        height: 20%;
-        color: #fff;
-        border-radius: 5px;
-        padding: 10px 25px;
-        font-family: 'Fira Sans', sans-serif;
-        font-size: x-large;
-        background: linear-gradient(0deg, rgba(255,151,0,1) 0%, rgba(251,75,2,1) 100%);
-        cursor: pointer;
-        transition: all 0.3s ease;
-        position: relative;
-        display: inline-block;
-         box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-         7px 7px 20px 0px rgba(0,0,0,.1),
-         4px 4px 5px 0px rgba(0,0,0,.1);
-        outline: none;
- }
+ 
 
 .img{
     width: 20%;
@@ -163,13 +146,13 @@ button{
     font-size:x-large;
     font-family: 'Fira Sans', sans-serif;
     border-radius: 5%;
-  
+    margin: 32px;
 }
 
 
 .btn-7 {
     background: linear-gradient(rgba,rgba(251,75,2,1)0%, rgba(255,151,0,1) 100%);
-      line-height: 85%;
+      
       padding: 0;
       border: none;
     }
@@ -239,9 +222,7 @@ button{
     .btn-7 span:hover:after {
       width: 100%;
     }
-    button {
-        margin: 40px;
-      }
+    
       .custom-btn {
         width: 60%;
         height: 20%;
