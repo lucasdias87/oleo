@@ -1,7 +1,7 @@
 # Aplicativo para o controle da troca de óleo da Moto 
 
 
--  criado em HTML, CSS,  Javascript e Java
+-  Criado em HTML, CSS,  Javascript e Java
   
 [Play Store](https://play.google.com/store/apps/details?id=com.moto.myapplication)
 
