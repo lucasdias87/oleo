@@ -39,7 +39,7 @@ function Deletar(){
         
         duration: 4000,
         newWindow: true,
-       
+       avatar:"img/load.gif",
         gravity: "top", // `top` or `bottom`
         position: "center", // `left`, `center` or `right`
         style: {
