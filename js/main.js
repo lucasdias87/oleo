@@ -35,7 +35,7 @@ function Deletar(){
     localStorage.removeItem("troca");
     Toastify({
 
-        text: " Deletado com suceso !",
+        text: " Aguarde deletando !",
         
         duration: 4000,
         newWindow: true,
@@ -44,6 +44,7 @@ function Deletar(){
         position: "center", // `left`, `center` or `right`
         style: {
             background: "#fe6543",
+            font:"Fira Sans, sans-serif",
           }
           
         }).showToast();
