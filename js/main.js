@@ -1,6 +1,6 @@
 
 
-  
+
 
 
 let  m1=   JSON.parse(localStorage.getItem("km"));
@@ -19,9 +19,7 @@ let  m3=   JSON.parse(localStorage.getItem("data"));
   
    
        
-  
-
-
+   
 
 
 
@@ -35,8 +33,24 @@ function Deletar(){
     localStorage.removeItem("tipooleo");
     localStorage.removeItem("data");
     localStorage.removeItem("troca");
+    Toastify({
 
-   
+        text: " Deletado com suceso !",
+        
+        duration: 4000,
+        newWindow: true,
+       
+        gravity: "top", // `top` or `bottom`
+        position: "center", // `left`, `center` or `right`
+        style: {
+            background: "#fe6543",
+          }
+          
+        }).showToast();
+       
+        setTimeout(function(){
+            window.location.reload(1);
+         }, 4190);
 }
 
  
@@ -85,7 +99,7 @@ function Calcular(){
      
        const array_dt=[dia,month,year];
        
-    document.getElementById('resultado').innerHTML = " Sua proxima troca sera em "
+    document.getElementById('resultado').innerHTML = " Sua proxima troca sera em "+
     +resultado.toFixed()+" dias aproximadamente";
     
     document.getElementById('date').innerHTML= "Dia" +" " +dia + "/"+  month+ "/" +  year;
@@ -100,7 +114,6 @@ function Calcular(){
     localStorage.setItem('km', JSON.stringify(pxkm)); 
    
    
-    
     
 
 
