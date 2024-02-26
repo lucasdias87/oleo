@@ -58,21 +58,21 @@ function appendMessage(sender, message) {
 
 function simulateRobotResponse(question) {
   // Simulação simples de resposta com base na pergunta
-  if (question.includes('oi')) {
-    return "Oi, eu sou o Peter! Pode mandar suas perguntas sobre trocas, tipo: \n\n   'Por que tenho que trocar o óleo' \n\nou ' cadastrar a minha troca'. Estou aqui pra te ajudar a entender tudo sobre a manutenção da sua motona !'";
+  if (question.includes('Oi')) {
+    return "Oi, eu sou o Peter! Pode mandar suas perguntas sobre trocas, tipo: \n\n   'Por que tenho que trocar o óleo' \n\nou ' Cadastrar a minha troca'. Estou aqui pra te ajudar a entender tudo sobre a manutenção da sua motona !'";
   }
-  if (question.includes('dica' )) {
-    return "Me pergunte: 'cadastrar minha troca' ou \n\n'proxima troca'";
+  if (question.includes('Dica' )) {
+    return "Me pergunte: 'Cadastrar minha troca' ou \n\n'Proxima troca'";
   }
 
 
-   if(question.includes('cadastrar a minha troca')){
+   if(question.includes('Cadastrar a minha troca')){
     return'Se ligue no botão do óleo lá em cima! É só clicar e pronto, você vai cadastrar a próxima troca! Eu sou o Peter, o mecânico virtual com as chaves de grifo mais afiadas da internet! ';
   
 
   }
 
-    if (question.includes('proxima troca' )) {
+    if (question.includes('Proxima troca' )) {
       if (m1 && m2 && m3) {
         return`Oi, eu sou o Peter! Sua última troca de óleo é dia ${m3} com ${m1} km percorridos e usando o tipo de óleo ${m2}. Como posso ajudar você hoje?`;
       
@@ -82,11 +82,11 @@ function simulateRobotResponse(question) {
       }
   }
  
-    else if(question.includes('porque tenho que trocar o oleo')){
+    else if(question.includes('Porque tenho que trocar o oleo')){
       return'A troca de óleo em motocicletas é crucial para manter a saúde do motor\n\n e garantir um desempenho duradouro. O óleo lubrifica as peças móveis\n\nreduzindo o atrito e evitando o desgaste prematuro. Além disso, contribui para o resfriamento\n\n e limpeza do motor.  Uma motocicleta requer a troca de óleo para evitar danos internos.'
     
   } 
-   if(question.includes("salvar")){
+   if(question.includes("Salvar")){
     return'Para salvar a próxima troca de óleo no Google Agenda, crie um evento com data, hora e lembretes. Escolha a agenda adequada e salve-o para receber lembretes à medida que a data se aproxima. Isso garantirá que você não perca o prazo para a próxima troca de óleo, mantendo a moto em bom estado.'
   }
   
