@@ -92,7 +92,7 @@ function simulateRobotResponse(question) {
   
   
  else  {
-    return "Eita, perdão pela bagunça! Não peguei o trampo direito. Quer falar sobre o que? digite 'dica'";
+    return "Eita, perdão pela bagunça! Não peguei o trampo direito. Quer falar sobre o que? digite 'Dica'";
   }
   
 }
