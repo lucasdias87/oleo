@@ -364,13 +364,13 @@ button{
         overflow-y: auto;
         font-family: 'Fira Sans', sans-serif;
         color: #333f47;
-        font-size: large; /* Reduzi o tamanho da fonte para melhorar a legibilidade em dispositivos menores */
+        font-size: x-large; /* Reduzi o tamanho da fonte para melhorar a legibilidade em dispositivos menores */
         margin: 1%;
       }
       
       #input-container {
         display: flex;
-        flex-direction: column; /* Alterei para uma direção de coluna para melhorar a adaptação em dispositivos móveis */
+        align-items: center;
         padding: 2%;
       }
       
