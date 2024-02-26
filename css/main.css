@@ -330,15 +330,17 @@ button{
       }
       
       .user-message {
-        color: #1967D2; /* Cor azul do usuário */
+        color: #a9c3e7; /* Cor azul do usuário */
+        background-color:#333;
         padding: 10px;
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid #333; /* Bordas mais escuras para destacar */
       }
       
       .robot-message {
-        color: #4CAF50; /* Cor verde do Peter (robô) */
+        color: #FFA500; /* Cor abóbora */
+        background-color: #000000; /* Fundo preto para maior contraste */
         padding: 10px;
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid #333; /* Bordas mais escuras para destacar */
       }
       
       #user-input {
@@ -370,7 +372,7 @@ button{
       
       #input-container {
         display: flex;
-        align-items: center;
+        flex-direction: column; /* Alterei para uma direção de coluna para melhorar a adaptação em dispositivos móveis */
         padding: 2%;
       }
       
