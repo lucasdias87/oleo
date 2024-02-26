@@ -13,6 +13,13 @@
         
       }
      
+
+
+
+
+
+
+      
   }
    
 
@@ -84,8 +91,8 @@ input:hover{
     color: white;
     outline: none;
     text-decoration: none;
-    text-transform: uppercase;
-    font-size: x-large;
+   
+   
     box-shadow: 0px 5px 10px #e9e4e7;
 }
 input:active{
@@ -307,3 +314,95 @@ button{
         }
       }
       
+
+
+
+      
+      
+      #chat-container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+        border: 1px solid #ccc;
+        border-radius: 15%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: white;
+      }
+      
+      .user-message {
+        color: #1967D2; /* Cor azul do usuário */
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+      
+      .robot-message {
+        color: #4CAF50; /* Cor verde do Peter (robô) */
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+      
+      #user-input {
+        width: calc(100% - 20px);
+        padding: 1rem; /* Reduzi o padding para torná-lo mais adequado para dispositivos móveis */
+        border: none;
+        border-top: 1px solid #ccc;
+        outline: none;
+      }
+      
+      #chat-container {
+        max-width: 80%; /* Aumentei a largura máxima para melhor adaptação em telas menores */
+        margin: 8% auto;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        overflow: hidden;
+      }
+      
+      #chat-output {
+        padding: 3%; /* Reduzi o padding para aproveitar melhor o espaço */
+        height: 20rem; /* Ajustei a altura para uma experiência mais equilibrada em dispositivos móveis */
+        overflow-y: auto;
+        font-family: 'Fira Sans', sans-serif;
+        color: #333f47;
+        font-size: large; /* Reduzi o tamanho da fonte para melhorar a legibilidade em dispositivos menores */
+        margin: 1%;
+      }
+      
+      #input-container {
+        display: flex;
+        flex-direction: column; /* Alterei para uma direção de coluna para melhorar a adaptação em dispositivos móveis */
+        padding: 2%;
+      }
+      
+      #user-input {
+        width: calc(100% - 20px);
+        padding: 1rem;
+        margin-bottom: 1rem; /* Adicionei margem inferior para separar o input do botão */
+        background-color: gray;
+      }
+      
+      /* Adicionei uma regra de mídia para ajustes específicos em telas menores */
+      @media only screen and (max-width: 600px) {
+        #chat-container {
+          max-width: 90%; /* Ajuste adicional para telas muito pequenas */
+        }
+      
+        #chat-output {
+          height: 15rem; /* Ajuste adicional da altura para telas menores */
+          font-size: medium; /* Reduzi ainda mais o tamanho da fonte para telas pequenas */
+        }
+      }
+      
+      
+      button {
+        padding: 1rem;
+        background-color: #fe6543;
+        color: white;
+        border: none;
+       
+        cursor: pointer;
+      }
+      button:hover{
+        background-color: #ccc;
+        color: #fe6543;
+      }
